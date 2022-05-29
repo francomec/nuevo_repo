@@ -1,0 +1,25 @@
+jQuery(document).ready(function(){
+		jQuery('input').click(function(){
+			//var ourText = $('p');
+			var ourText = jQuery('#content .post p');
+			var currFontSize = ourText.css('fontSize');
+			var finalNum = parseFloat(currFontSize, 13);
+			var stringEnding = currFontSize.slice(-2);
+			if(this.id == 'flarge') {
+				finalNum *= 1.2;
+				if (finalNum >= 20) {finalNum = 20;}
+			}
+			else if (this.id == 'fsmall'){
+				finalNum /=1.2;
+				if (finalNum <= 9) {finalNum = 9;}
+			}
+			else if (this.id == 'fnormal'){
+				finalNum = 13;
+			}
+			else {
+				finalNum = 13;
+			}
+			//ourText.css('fontSize', finalNum + stringEnding);
+			ourText.animate({fontSize: finalNum + stringEnding},600);
+		});
+});

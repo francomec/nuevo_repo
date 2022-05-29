@@ -1,0 +1,194 @@
+ h2 {
+     text-decoration: underline;
+ }
+ 
+ .cuerpo {
+     background-color: wheat;
+ }
+
+ .header { 
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;
+     
+ }
+
+ .header-1 {
+     display: flex;
+     flex-direction: row-reverse;
+     gap: 20px;
+ }
+
+ .imagen-1 {
+     max-width: 50px;
+ }
+
+ .header-2 {
+    background-color: white;
+    height: 50px;
+    left: 0%;
+    list-style: lower-roman;
+    }
+
+  .header-3 {
+      list-style-position: initial;
+      list-style: circle;
+  }
+
+    .nav-1 , .nav-2 , .nav-3 , .nav-4 {
+        bottom: 20px;
+        gap: 15px;
+        list-style-type: lower-roman ;
+        display: inline-block;
+        
+    }
+
+
+.contactoshead {
+    background-color: wheat;
+}
+
+.contactanos {
+    text-decoration: underline;
+}
+
+
+    #article {
+   
+    display: grid;
+    grid-template-columns: auto auto 325px;
+    grid-template-rows: 1fr 500px;
+    grid-template-areas: "articulo1 articulo2  aside1"
+                         " articulo3 articulo2 aside2"
+
+                  ;
+    
+}
+
+.article1 {
+    grid-area: articulo1 ;
+} 
+
+.article2 {
+    grid-area: articulo2;
+}
+
+.article3 {
+    grid-area: articulo3;
+}
+
+.aside1 {
+    grid-area: aside1;
+    border: solid 3px black;
+}
+
+.aside2 {
+    grid-area: aside2;
+    border: solid 3px black;
+}
+
+#noticias {
+    border: solid 3px yellow;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 600px 300px;
+    grid-template-areas: "noticia1 noticia2 "
+                  "noticia3 noticia2"
+                  ;
+    
+                gap: 1rem
+}
+
+.noticia1 {
+    grid-area: noticia1;
+
+}
+
+.noticia2 {
+  grid-area: noticia2 ;
+}
+
+.noticia3 {
+   grid-area: noticia3;
+}
+ 
+
+
+
+.article-1 {
+    border: solid 3px blue ;
+    width: 500px;
+}
+
+.imagen-2 {
+    width: 495px;
+    height: 300px;
+}
+
+.informaciondeportiva-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px ;
+}
+
+.fitness {
+    max-width: 305;
+    border:  solid 5px white;
+}
+
+.escuelas-deportivas {
+    max-width: 605px;
+    border: solid 5px white;
+}
+
+.running {
+    padding-left: 20px;
+    border: solid 5px white;
+}
+
+ 
+@media screen and (max-width: 768px) {
+  
+    #article {
+        display: grid;
+        grid-template-columns: 75% auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:"articulo1 aside1"
+                            "articulo2 aside1"
+                            " articulo3 aside2"  ;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    #noticias{
+        grid-template-rows: auto auto auto ;
+        grid-template-areas: "noticia1" 
+                              "noticia2"
+                              "noticia3";
+    } 
+
+}
+    
+
+@media screen and (max-width: 367px) {
+  
+    #article {
+        display: grid;
+        grid-template-columns: 75% auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:"articulo1 aside1"
+                            "articulo2 aside1"
+                            " articulo3 aside2"  ;
+
+
+              
+    @media screen and (max-width: 768px) {
+    
+      #noticias{
+          grid-template-rows: auto auto auto ;
+         grid-template-areas: "noticia1" 
+                              "noticia2"
+                              "noticia3";
