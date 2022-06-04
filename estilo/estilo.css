@@ -1,3 +1,7 @@
+ h1 {
+     padding: 8px;
+ }
+ 
  h2 {
      text-decoration: underline;
  }
@@ -7,9 +11,7 @@
  }
 
  .header { 
-    display: flex;
-    flex-direction: row;
-     justify-content: space-between;
+    padding-bottom: 20px;
      
  }
 
@@ -35,13 +37,9 @@
       list-style: circle;
   }
 
-    .nav-1 , .nav-2 , .nav-3 , .nav-4 {
-        bottom: 20px;
-        gap: 15px;
-        list-style-type: lower-roman ;
-        display: inline-block;
+   
         
-    }
+    
 
 
 .contactoshead {
@@ -179,16 +177,16 @@
         display: grid;
         grid-template-columns: 75% auto;
         grid-template-rows: auto auto auto;
-        grid-template-areas:"articulo1 aside1"
-                            "articulo2 aside1"
-                            " articulo3 aside2"  ;
+        grid-template-areas:"articulo1"
+                            "articulo2"
+                            " articulo3"  ;
 
 
               
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 367) {
     
       #noticias{
           grid-template-rows: auto auto auto ;
          grid-template-areas: "noticia1" 
                               "noticia2"
-                              "noticia3";
+                              "noticia3"; }
