@@ -7,7 +7,7 @@
  }
  
  .cuerpo {
-     background-color: wheat;
+    background-color:antiquewhite ;
  }
 
  .header { 
@@ -115,8 +115,7 @@
 
 
 .article-1 {
-    border: solid 3px blue ;
-    width: 500px;
+width: 500px;
 }
 
 .imagen-2 {
@@ -175,18 +174,38 @@
   
     #article {
         display: grid;
-        grid-template-columns: 75% auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"articulo1"
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:"articulo1" 
                             "articulo2"
-                            " articulo3"  ;
-
+                            "articulo3"
+                            " aside1"
+                            "aside2"  ; }
+    }
 
               
-    @media screen and (max-width: 367) {
+    @media screen and (max-width: 367px) {
     
-      #noticias{
+      #noticias {
           grid-template-rows: auto auto auto ;
          grid-template-areas: "noticia1" 
                               "noticia2"
-                              "noticia3"; }
+                              "noticia3" }
+       }            
+       
+       @media screen and (max-width: 700px) {
+  
+        #article {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas:"articulo1" 
+                                "articulo2"
+                                "articulo3"
+                                " aside1"
+                                "aside2"  ; }
+          }                      
+
+      .imagenfooter :hover:active  {
+        height: 500px;  width: 1000px ;
+       }
