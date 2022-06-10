@@ -124,43 +124,44 @@ width: 500px;
 }
 
 .informaciondeportiva-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px ;
+    display: grid;
+    grid-template-columns: auto auto 325px;
+    grid-template-rows: 1fr ;
+    grid-template-areas: " fitnes escuelas running"
+                         
 }
 
 .fitness {
-    max-width: 305;
+    grid-area: fitnes;
     border:  solid 5px white;
 }
 
 .escuelas-deportivas {
-    max-width: 605px;
+   grid-area: escuelas ;
     border: solid 5px white;
 }
 
 .running {
-    padding-left: 20px;
+    grid-area: running;
     border: solid 5px white;
 }
 
  
-@media screen and (max-width: 768px) {
-  
-    #article {
+@media screen and (max-width: 1008px) {
+    
+    #informaciondeportiva-section {
         display: grid;
-        grid-template-columns: 75% auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"articulo1 aside1"
-                            "articulo2 aside1"
-                            " articulo3 aside2"  ;
-    }
-}
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto ;
+        grid-template-areas: "fitnes" 
+                              "escuelas"
+                              "running"; }
+    }                              
 
 @media screen and (max-width: 768px) {
     
     #noticias{
+        
         grid-template-rows: auto auto auto ;
         grid-template-areas: "noticia1" 
                               "noticia2"
